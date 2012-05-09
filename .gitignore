@@ -19,3 +19,5 @@ db/database.yml
 s3.yml
 
 #git filter-branch --index-filter 'git rm --cached --ignore-unmatch config/s3.yml' --prune-empty -- --all
+#git filter-branch --index-filter 'git update-index --remove filename' HEAD
+#git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch config/s3.yml' HEAD
