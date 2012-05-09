@@ -1,0 +1,14 @@
+<h2><%=current_user.email %> - Uploads</h2>
+<%= link_to "Add Upload", new_upload_path %>
+<ul>
+<% @uploads.each do |upload| %>
+  <li><%= link_to "delete", upload_path(upload), :method => :delete, :confirm => "Are you sure you want to do that?" %> 
+    | 
+    <%= link_to "Download #{upload.document_file_name}", upload.document.url if upload.document.exists? %>
+    | 
+    <%= upload.to_email %> 
+    | 
+    <%= upload.comment %>
+  </li>
+<% end %>
+</ul>
