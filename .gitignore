@@ -15,6 +15,7 @@
 /tmp
 .DS_store
 db/database.yml
-config/s3.yml
+/config/s3.yml
+s3.yml
 
 #git filter-branch --index-filter 'git rm --cached --ignore-unmatch config/s3.yml' --prune-empty -- --all
